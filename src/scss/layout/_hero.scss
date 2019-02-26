@@ -1,0 +1,197 @@
+.hero {
+  position: relative;
+  padding-top: 48px;
+}
+
+.hero-disk,
+.hero-sphere {
+  position: absolute;
+}
+
+.hero-disk {
+
+  svg {
+    width: 300px;
+    height: auto;
+  }
+}
+
+.hero-sphere {
+  display: none;
+
+  svg {
+    transform-origin: 50% 50%;
+    animation: sphere-rotation 60s linear infinite;
+  }
+}
+
+.hero-disk-1 {
+  top: 76px;
+  right: -140px;
+
+  svg {
+    transform-origin: 50% 100%;
+    animation: disk-rotation-alt 10s linear infinite alternate;
+  }
+}
+
+.hero-disk-2 {
+  top: -70px;
+  right: -88px;
+
+  svg {
+    transform-origin: 50% 0;
+    animation: disk-rotation 15s linear infinite alternate;
+  }
+}
+
+.hero-disk-3 {
+  bottom: 112px;
+  left: -186px;
+
+  svg {
+    transform-origin: 50% 100%;
+    animation: disk-rotation 10s linear infinite alternate;
+  }
+}
+
+.hero-disk-4 {
+  bottom: 25px;
+  left: -106px;
+
+  svg {
+    transform-origin: 50% 0;
+    animation: disk-rotation-alt 15s linear infinite alternate;
+  }
+}
+
+.hero-sphere-1 {
+  top: 316px;
+  right: 80px;
+}
+
+.hero-sphere-2 {
+  bottom: 591px;
+  left: 50px;
+}
+
+@keyframes disk-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes disk-rotation-alt {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes sphere-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hero-paragraph {
+  margin-bottom: 32px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.hero-browser {
+  position: relative; /* To display all elements above the illustrations */
+
+  img,
+  svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+@include media( '>medium' ) {
+  .hero {
+    padding-top: 60px;
+    padding-bottom: 24px;
+  }
+
+  .hero-disk {
+    svg {
+      width: 600px;
+    }
+  }
+
+  .hero-sphere {
+    display: block;
+  }
+
+  .hero-disk-1 {
+    right: -260px;
+  }
+
+  .hero-disk-2 {
+    top: -100px;
+  }
+
+  .hero-disk-3 {
+    bottom: 253px;
+    left: -213px;
+  }
+
+  .hero-disk-4 {
+    bottom: 53px;
+    left: 31px;
+  }
+
+  .hero-title {
+    margin-bottom: 20px;
+  }
+
+  .hero-paragraph {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-browser {
+    margin-top: -67px;
+    margin-bottom: -64px;
+    position: relative;
+    z-index: 0;
+  }
+}
+
+@media all and (max-width: 580px) {
+  .hero {
+    padding-top: 20px;
+  }
+
+  .hero-paragraph {
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  h1, .h1 {
+    font-size: 36px;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+}

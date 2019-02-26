@@ -1,0 +1,93 @@
+.button {
+  display: inline-flex;
+  min-width: 195px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  @include font-weight(bold);
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  background-color: color(bg, 1);
+  color: color(primary, 1) !important;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  justify-content: center;
+  padding: 14px 40px;
+  height: 44px;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  z-index: 2;
+
+  &:active {
+    outline: 0;
+  }
+
+  &::before {
+    border-radius: 2px;
+  }
+}
+
+.button-shadow {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 8px 48px rgba(color(primary, 1), .48);
+    transition: box-shadow .15s ease;
+  }
+
+  &:hover {
+
+    &::before {
+      box-shadow: 0 8px 48px rgba(color(primary, 1), .6);
+    }
+  }
+}
+
+.button-sm {
+  padding: 8px 24px;
+  height: 32px;
+
+  &.button-shadow {
+
+    &::before {
+      box-shadow: 0 4px 32px rgba(color(primary, 1), .48);
+    }
+
+    &:hover {
+
+      &::before {
+        box-shadow: 0 4px 32px rgba(color(primary, 1), .6);
+      }
+    }
+  }
+}
+
+.button-primary {
+  color: color(typography, 1) !important;
+  transition: background .15s ease;
+}
+
+.button-primary {
+  box-shadow: 0 0 16px 0 rgba(97, 71, 170, 0.4);
+  background-color: #5c459d;
+
+  &:hover {
+    background-color: lighten( #5c459d, 5%);
+  }
+
+  &:active {
+    background-color: darken( #5c459d, 5%);
+  }
+}
+
+.button-block {
+  display: flex;
+}

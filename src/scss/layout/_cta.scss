@@ -1,0 +1,53 @@
+.cta {
+  padding-top: 25px;
+  padding-bottom: 80px;
+
+  .section-paragraph {
+    margin-bottom: 32px;
+    color: rgba(255,255,255, 0.7);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.76;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-title {
+    margin-bottom: 27px;
+  }
+}
+
+.dashed {
+  color: #fff;
+  text-decoration: none;
+  transition: all .15s linear;
+  &:hover {
+    color: #5c459d;
+  }
+}
+
+@include media( '>medium' ) {
+  .cta {
+    .section-paragraph {
+      margin-bottom: 50px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+}
+
+@media all and (max-width: 580px) {
+  .cta {
+    .section-paragraph {
+      font-size: 14px;
+      max-width: 340px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-title {
+      margin-bottom: 15px;
+    }
+  }
+}
